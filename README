@@ -1,0 +1,52 @@
+Goal & Motivation: My original idea was to create a bot that reacts to human emotion by sending prompts based on those emotions. Sadly the achieved test accuracy of 61% is not
+sufficient to be practical during a conversation. So instead of focusing on the bot I created a prototype that collects new data with the help of some userinput. 
+Since privacy is a bit of a concern this only happens on your local file structure.
+
+-----------------
+Step 1 [Optional]
+-----------------
+You can skip this step if you dont want to train the model yourself.
+
+Sadly I cant upload the training data since its too large for GitHub. You can contact me or follow these steps:
+- Download & unpack Datasource 1
+- In the test and train subfolders: Remove the disgust folders
+- Download & unpack Datasource 2
+- Add the new data to the corresponding subfolders in {unpacked_datasource_1}/train/{name_of_emotion}
+
+The Project should work just fine if you only use Datasource 1 but I dont know to what degree this will infulence the performance.
+
+Datasource 1: https://www.kaggle.com/datasets/msambare/fer2013/data
+Datasource 2: https://www.kaggle.com/datasets/sudarshanvaidya/random-images-for-face-emotion-recognition/data
+
+-----------------
+Step 2
+-----------------
+Set up a python environment with python version 3.12.3
+(If version 3.12.3 is not available for you: update your pyenv)
+
+-----------------
+Step 3
+-----------------
+Install the necessary libraries according to requirements.txt
+--> pip install -r requirements.txt 
+
+-----------------
+Step 4 [Optional]
+-----------------
+run model.py in order to train the model, if you dont want to train the model just use the .keras one in "saved_models"
+
+-----------------
+Step 5 
+-----------------
+run the app.py by typing 'streamlit run app.py' in the terminal (make sure your environment is active)
+--> model.py to train the model
+--> test.py is for evaluation of the model
+--> app.py it the main application
+
+
+-----------------
+Additional Info
+-----------------
+- If you experience the following warning ('As the c extension couldn't be imported, `google-crc32c` is using a pure python implementation that is significantly slower. If possible, please configure a c build environment and compile the extension') when starting the application, you can either choose to ignore it or paste it into chatgpt in order to get a quick guide on how to install the required extensions.
+- On first startup make sure to give your permission for camera access since the application wont work without it.
+
