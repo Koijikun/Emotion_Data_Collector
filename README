@@ -1,11 +1,11 @@
-Goal & Motivation: My original idea was to create a bot that reacts to human emotion by sending prompts based on those emotions. Sadly the achieved test accuracy of 61% is not
-sufficient to be practical during a conversation. So instead of focusing on the bot I created a prototype that collects new data with the help of some userinput. 
-Since privacy is a bit of a concern this only happens on your local file structure.
+Goal & Motivation: My original idea was to create a bot that reacts to human emotion by sending prompts based on those emotions. Sadly the achieved test accuracy of just over 60% is not
+sufficient to be practical during a conversation. So instead of focusing on the bot I created a prototype that collects new data with the help of some userinput. At least in theory users should be more likely
+to help gather data if its trough interaction which is why this approach was chosen. Since privacy is a bit of a concern this only happens on your local file structure.
 
 -----------------
 Step 1 [Optional]
 -----------------
-You can skip this step if you dont want to train the model yourself.
+You can skip this step if you dont want to train the model yourself. If you want to evaluate the model you still have to unpack the "model_data.zip" but please note that only the test data (needed for test.py) is included here on GitHub.
 
 Sadly I cant upload the training data since its too large for GitHub. You can contact me or follow these steps:
 - Download & unpack Datasource 1
@@ -47,6 +47,8 @@ run the app.py by typing 'streamlit run app.py' in the terminal (make sure your 
 -----------------
 Additional Info
 -----------------
-- If you experience the following warning ('As the c extension couldn't be imported, `google-crc32c` is using a pure python implementation that is significantly slower. If possible, please configure a c build environment and compile the extension') when starting the application, you can either choose to ignore it or paste it into chatgpt in order to get a quick guide on how to install the required extensions.
+- If you experience the following warning ('As the c extension couldn't be imported, `google-crc32c` is using a pure python implementation that is significantly slower. 
+If possible, please configure a c build environment and compile the extension') when starting the application, you can either choose to ignore it or paste it into chatgpt 
+in order to get a quick guide on how to install the required extensions.
 - On first startup make sure to give your permission for camera access since the application wont work without it.
 
